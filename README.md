@@ -10,27 +10,32 @@ This project demonstrates a full-lifecycle **SQL analytics workflow**. Starting 
 * **Impact** : Successfully identified revenue concentration in the "Bikes" category and established a 360° view of customer spending behavior.
 
 ### 🏗️ Methodology & Roadmap
-  ####   Change Over Time Analysis
-* **Concept** : Analyzing how metrics evolve over periods (Year/Month).
-* **Action** : Aggregated Total Sales, Customer Count, and Quantity by Order Year and Order Month.
-* **Insight** : Identified seasonal peaks (December) and tracked historical revenue declines.
-####  Cumulative Analysis (Running Totals)
-* **Concept** : Measuring business progression.
-* **Action** : Applied SUM() OVER(ORDER BY...) to calculate running totals of sales.
-* **Insight** : Visualized how total revenue accumulates throughout the fiscal year.
-####  Performance Analysis (Benchmarking)
-* **Concept** : Comparing current performance against a target.
-* **Action** : Used LAG() to compare current year sales to the previous year and AVG() OVER() to compare products against the global average.
-* **Insight** : Flagged products as "Above Average" or "Below Average" performers.
-#### Part-to-Whole Analysis
-* **Concept** : Proportion of a part relative to the whole.
-* **Action** : Calculated the percentage of total sales contributed by each category.
-* **Insight** : Discovered that Bikes dominate 69% of the revenue, highlighting a high-dependency risk.
-#### Data Segmentation 
-* **Concept** : Grouping data based on specific behavior ranges.
-* **Action** : Used CASE WHEN to bucket customers into VIP (Long lifespan + High spend), Regular, and New segments.
-* **Insight** : Quantified the size of the loyal customer base vs. the acquisition funnel.
-   
+     >  Change Over Time Analysis
+>> * Concept : Analyzing how metrics evolve over periods (Year/Month).
+>> * Action : Aggregated Total Sales, Customer Count, and Quantity by Order Year and Order Month.
+>> * Insight  : Identified seasonal peaks (December) and tracked historical revenue declines.
+    
+    >  Cumulative Analysis (Running Totals)
+>> * Concept  : Measuring business progression.
+>> * Action : Applied SUM() OVER(ORDER BY...) to calculate running totals of sales.
+>> * Insight : Visualized how total revenue accumulates throughout the fiscal year.
+
+    >  Performance Analysis (Benchmarking)
+>> * Concept : Comparing current performance against a target.
+>> * Action : Used LAG() to compare current year sales to the previous year and AVG() OVER() to compare products against the global average.
+>> * Insight : Flagged products as "Above Average" or "Below Average" performers.
+
+    > Part-to-Whole Analysis
+>> * Concept : Proportion of a part relative to the whole.
+>> * Action : Calculated the percentage of total sales contributed by each category.
+>> * Insight : Discovered that Bikes dominate 69% of the revenue, highlighting a high-dependency risk.
+
+     > Data Segmentation 
+>> * Concept : Grouping data based on specific behavior ranges.
+>> * Action : Used CASE WHEN to bucket customers into VIP (Long lifespan + High spend), Regular, and New segments.
+>> * Insight : Quantified the size of the loyal customer base vs. the acquisition funnel.
+
+
 ### 🛠️ Technical Skills
 * **Advanced SQL** : Window Functions (PARTITION BY, ORDER BY, ROWS BETWEEN), CTEs, Subqueries.
 * **Data Transformation** : DATEDIFF for lifespan, DATETRUNC for granularity, CAST for percentage accuracy.
